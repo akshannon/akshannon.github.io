@@ -7,7 +7,12 @@ tan: D9C5B2
 */
 
 body {
-  background-color: #925E78;
+    background-color: #ebcedd;
+}
+.base {
+    background-color: #925E78;
+    max-width: 850px;
+    margin: 0 auto;
 }
 header {
     background-color: #D9C5B2;
@@ -22,6 +27,7 @@ header {
   object-fit: cover;
   padding: 5px;
   outline: 2px solid #F3F3F4;
+  margin: 10px;
 }
 .profile-row {
     display: flex;
@@ -40,6 +46,10 @@ header {
     width: 18px;
     height: 18px;
 }
+.contact-icon {
+    width:20px;
+    height:20px;
+}
 .contact-info {
     display: flex;
     align-items: center;
@@ -47,6 +57,8 @@ header {
 }
 h1 {
   color: black;
+  position: relative;
+  top: 15px;
 }
 p {
   color: black;
@@ -56,6 +68,8 @@ rounded-white-box {
     border-radius: 100px;
     padding: 20px;
     line-height: 0.1;
+    display: vflex;
+    align-items: center;
 }
 section {
     background-color: #F3F3F4;
