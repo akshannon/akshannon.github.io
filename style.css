@@ -62,17 +62,65 @@ section {
     border-radius: 30px;
     padding: 10px;
 }
-.project-row {
+.project-carousel {
+    display: flex;
+    min-width: 0;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 20px;
+    padding: 20px;
+    margin: 0;
+    list-style: none;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+}
+.project-carousel::-webkit-scrollbar {
+    display: none;
+}
+.project-carousel-container {
     display: flex;
     align-items: center;
-    gap: 20px;
-    border-radius: 30px;
-    padding: 20px;
-}
-.project-card {
-    background-color: #F3F3F4;
+    gap: 10px;
+    background-color: #2F6824;
     border-radius: 30px;
     padding: 10px;
-    width: 100%;
-    aspect-ratio: 1;
+}
+.project-card {
+    scroll-snap-align: start;
+    flex: 0 0 calc((100% - 40px) / 3);
+    box-sizing: border-box;
+    min-height: 200px;
+    background-color: #F3F3F4;
+    border-radius: 20px;
+    padding: 16px;
+}
+.carousel-button {
+    flex: 0 0 auto;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #F3F3F4;
+    color: #2F6824;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.carousel-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+.carousel-button:focus-visible {
+    outline: 3px solid #F3F3F4;
+    outline-offset: 3px;
+}
+@media (max-width: 700px) {
+    .project-card {
+        flex-basis: calc((100% - 20px) / 2);
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .project-carousel {
+        scroll-behavior: auto;
+    }
 }

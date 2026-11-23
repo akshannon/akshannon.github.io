@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 
-<script defer src=”script.js”></script>
-
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
+        <script defer src="script.js"></script>
     </head>
 <body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 20px;">
 <header>
     <div class="profile-row">
         <img src="photos/Profile pic.JPG" alt="Avatar" class="avatar">
@@ -27,24 +27,33 @@
     </div>
     <section>
         <h2 style="color: #2F6824">About Me</h2>
-        <p>I am a passionate web developer with a love for creating beautiful and functional websites.</p>
+        <p>Computer Science major graduating Colorado State University May 2027</p>
+        <p>People & Design-oriented software engineer</p>
     </section>
 </header>
 <h1>Projects</h1>
-<div class="project-row" style="background-color: #2F6824; color: #F3F3F4; padding: 20px; border-radius: 30px;">
-    <div class="project-card">
+<div class="project-carousel-container">
+    <button class="carousel-button" type="button" aria-label="Previous projects" aria-controls="project-carousel" data-direction="-1">‹</button>
+    <ul class="project-carousel" id="project-carousel" aria-label="Projects">
+    <li class="project-card">
         <h3>Project 1</h3>
         <p>Description of Project 1.</p>
-    </div>
-    <div class="project-card">
+    </li>
+    <li class="project-card">
         <h3>Project 2</h3>
         <p>Description of Project 2.</p>
-    </div>
-    <div class="project-card">
+    </li>
+    <li class="project-card">
         <h3>Project 3</h3>
         <p>Description of Project 3.</p>
-    </div>
-
-</section>
+    </li>
+    <li class="project-card">
+        <h3>Project 4</h3>
+        <p>Description of Project 4.</p>
+    </li>
+    </ul>
+    <button class="carousel-button" type="button" aria-label="Next projects" aria-controls="project-carousel" data-direction="1">›</button>
+</div>
+</div>
 </body>
 </html>
